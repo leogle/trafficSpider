@@ -1,0 +1,4 @@
+{
+  "appenders": { "trafficService": { "type": "file", "filename": "logs.log" } },
+  "categories": { "default": { "appenders": ["trafficService"], "level": "debug" } }
+}
