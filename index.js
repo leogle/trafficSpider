@@ -8,7 +8,7 @@ const qs = require('querystring')
 const fetch = require('node-fetch')
 const schedule = require('node-schedule');
 const fnv = require('fnv-plus');
-const log4js = require('../log/log');
+const log4js = require('./log/log');
 const log = log4js.logger("trafficService");
 
 const url = 'mongodb://localhost:27017/gztraffic';
@@ -217,6 +217,5 @@ function CalculateDistance(point1, point2) {
     var L = Math.acos(ANGLE) * earthR;
     return L;
 }
-getTraffic(4);
 //开始任务
 scheduleTask();
